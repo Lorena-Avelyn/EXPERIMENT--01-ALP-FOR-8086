@@ -139,6 +139,29 @@ ret
 ## Output  
 ![Screenshot 2025-03-03 144548](https://github.com/user-attachments/assets/e3e33c5d-3ccb-4a07-a2d4-d56182994916)
 
+## Logical Operation alp
+
+```
+org 100h
+
+MOV AX,0A32H
+MOV BX,0B31H
+MOV SI,5000H
+OR AX,BX
+MOV [SI], AX
+MOV AX,0A32H
+AND AX,BX
+MOV [SI+2], AX
+XOR AX,BX
+MOV [SI+4], AX
+MOV AX,0A32H
+NOT AX
+MOV [SI+6], AX
+
+ret
+```
+## Output
+![Screenshot 2025-03-10 144314](https://github.com/user-attachments/assets/584f7760-f7d5-4f8a-8396-cbfc24da243b)
 
 ## Result :
  ALP on fundamental arithmetic and logical operations is thus written and executed
